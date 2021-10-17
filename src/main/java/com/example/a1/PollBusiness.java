@@ -1,11 +1,21 @@
 package com.example.a1;
 
+import org.w3c.dom.Text;
+
 import java.io.PrintWriter;
 import java.util.HashMap;
 
 public class PollBusiness {
 
-    public Poll CreatePoll(String name, String question, String[] choices) {
+    public Poll CreatePoll(String name, Text question, Choice[] choices) {
+
+        try {
+            Poll newPoll = new Poll(name, question, choices);
+            return newPoll;
+        }
+        catch(Exception ex){
+
+        }
         return null;
     }
 

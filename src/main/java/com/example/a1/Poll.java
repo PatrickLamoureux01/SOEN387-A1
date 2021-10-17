@@ -15,10 +15,9 @@ public class Poll {
     PollStatus status;
     Choice[] choices;
 
-    public Poll(String _name,Text _question,PollStatus _status,Choice[] _choices) {
+    public Poll(String _name,Text _question,Choice[] _choices) {
         name = _name;
         question = _question;
-        status = _status;
         choices = _choices;
     }
 
