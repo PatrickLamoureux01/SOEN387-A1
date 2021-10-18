@@ -11,11 +11,11 @@ public class Poll {
     }
 
     String name;
-    Text question;
+    String question;
     PollStatus status;
     Choice[] choices;
 
-    public Poll(String _name,Text _question,Choice[] _choices) {
+    public Poll(String _name,String _question,Choice[] _choices) {
         name = _name;
         question = _question;
         choices = _choices;
@@ -29,11 +29,11 @@ public class Poll {
         this.name = name;
     }
 
-    public Text getQuestion() {
+    public String getQuestion() {
         return question;
     }
 
-    public void setQuestion(Text question) {
+    public void setQuestion(String question) {
         this.question = question;
     }
 

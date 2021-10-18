@@ -5,7 +5,7 @@ import org.w3c.dom.Text;
 public class Choice {
 
     String text;
-    Text description;
+    String description;
 
     public Choice() {
 
@@ -19,11 +19,11 @@ public class Choice {
         this.text = text;
     }
 
-    public Text getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Text description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
