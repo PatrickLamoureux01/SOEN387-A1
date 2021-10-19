@@ -13,22 +13,22 @@
                     Create a
                     Poll
                 </a>
-                <a href="PollServlet?type=g" class="btn btn-outline-primary">Run a
+                <a href="PollServlet?type=run" class="btn btn-outline-primary">Run a
                     Poll
                 </a>
-                <a href="PollServlet" class="btn btn-outline-primary">
+                <a href="PollServlet?type=close" class="btn btn-outline-primary">
                     Close a
                     Poll
                 </a>
-                <a href="PollServlet" class="btn btn-outline-primary">
+                <a href="PollServlet?type=release" class="btn btn-outline-primary">
                     Release a
                     Poll
                 </a>
-                <a href="PollServlet" class="btn btn-outline-primary">
+                <a href="PollServlet?type=unrelease" class="btn btn-outline-primary">
                     Unrelease
                     a Poll
                 </a>
-                <a href="PollServlet" class="btn btn-outline-primary">
+                <a href="PollServlet?type=update" class="btn btn-outline-primary">
                     Update a
                     Poll
                 </a>

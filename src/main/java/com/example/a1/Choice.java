@@ -7,8 +7,16 @@ public class Choice {
     String text;
     String description;
 
-    public Choice() {
 
+    public Choice(String t, String d) {
+
+        text = t;
+        description = d;
+    }
+
+    public Choice(String t) {
+        text = t;
+        description = null;
     }
 
     public String getText() {

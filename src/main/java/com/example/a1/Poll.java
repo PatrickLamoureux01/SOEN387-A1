@@ -2,6 +2,8 @@ package com.example.a1;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class Poll {
 
     enum PollStatus {
@@ -13,9 +15,9 @@ public class Poll {
     String name;
     String question;
     PollStatus status;
-    Choice[] choices;
+    ArrayList<Choice> choices;
 
-    public Poll(String _name,String _question,Choice[] _choices) {
+    public Poll(String _name,String _question,ArrayList<Choice> _choices) {
         name = _name;
         question = _question;
         choices = _choices;
@@ -45,11 +47,11 @@ public class Poll {
         this.status = status;
     }
 
-    public Choice[] getChoices() {
+    public ArrayList<Choice> getChoices() {
         return choices;
     }
 
-    public void setChoices(Choice[] choices) {
+    public void setChoices(ArrayList<Choice> choices) {
         this.choices = choices;
     }
 

@@ -1,6 +1,5 @@
 package com.example.a1;
 
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -44,13 +43,22 @@ public class PollServlet extends HttpServlet {
         String name = request.getParameter("pollName");
         String question =  request.getParameter("pollQuestion");
         String choices = request.getParameter("pollChoices");
+        String[] choicesTemp = choices.split(",");
+        ArrayList<Choice> pollChoices = new ArrayList<>();
 
+        for (String c : choicesTemp) {
+            if (c.contains(":")) { // if there is a description
+                String[] descTemp = c.split(":");
+                Choice ch = new Choice(descTemp[0],descTemp[1]);
+                pollChoices.add(ch);
+            } else {
+                Choice ch = new Choice(c);
+                pollChoices.add(ch);
+            }
+        }
 
-        out.println("poll created");
-
-
-
+        Poll newPoll = PollBusiness.CreatePoll(name,question,pollChoices);
 
     }
-    
+
 }

@@ -3,13 +3,14 @@ package com.example.a1;
 import org.w3c.dom.Text;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PollBusiness {
 
 
 
-    public static Poll CreatePoll(String name, String question, Choice[] choices) {
+    public static Poll CreatePoll(String name, String question, ArrayList<Choice> choices) {
 
         Poll newPoll;
 
@@ -24,7 +25,7 @@ public class PollBusiness {
         return null;
     }
 
-    public static void UpdatePoll(Poll poll, String name, String question, Choice[] choices) {
+    public static void UpdatePoll(Poll poll, String name, String question, ArrayList<Choice> choices) {
         if(poll.status == Poll.PollStatus.RUNNING || poll.status == Poll.PollStatus.CREATED)
         {
             //CLEAR CURRENT POLL RESULTS HERE ALSO
