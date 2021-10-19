@@ -7,9 +7,11 @@ import java.util.HashMap;
 
 public class PollBusiness {
 
-    Poll newPoll;
 
-    public Poll CreatePoll(String name, String question, Choice[] choices) {
+
+    public static Poll CreatePoll(String name, String question, Choice[] choices) {
+
+        Poll newPoll;
 
         try {
             newPoll = new Poll(name, question, choices);
@@ -22,50 +24,50 @@ public class PollBusiness {
         return null;
     }
 
-    public void UpdatePoll(String name, String question, Choice[] choices) {
-        if(newPoll.status == Poll.PollStatus.RUNNING || newPoll.status == Poll.PollStatus.CREATED)
+    public static void UpdatePoll(Poll poll, String name, String question, Choice[] choices) {
+        if(poll.status == Poll.PollStatus.RUNNING || poll.status == Poll.PollStatus.CREATED)
         {
             //CLEAR CURRENT POLL RESULTS HERE ALSO
-            newPoll.setName(name);
-            newPoll.setQuestion(question);
-            newPoll.setChoices(choices);
+            poll.setName(name);
+            poll.setQuestion(question);
+            poll.setChoices(choices);
         }
     }
 
-    public void ClearPoll() {
-        if(newPoll.status == Poll.PollStatus.RUNNING){
+    public static void ClearPoll(Poll poll) {
+        if(poll.status == Poll.PollStatus.RUNNING){
             //CLEAR CURRENT POLL RESULTS HERE ALSO
-        } else if(newPoll.status == Poll.PollStatus.RELEASED){
+        } else if(poll.status == Poll.PollStatus.RELEASED){
             //CLEAR CURRENT POLL RESULTS HERE ALSO
-            newPoll.status = Poll.PollStatus.CREATED;
+            poll.status = Poll.PollStatus.CREATED;
         }
     }
 
-    public void ClosePoll() {
+    public static void ClosePoll(Poll poll) {
 
     }
 
-    public void RunPoll() {
-        newPoll.status = Poll.PollStatus.RUNNING;
+    public static void RunPoll(Poll poll) {
+        poll.status = Poll.PollStatus.RUNNING;
     }
 
-    public void ReleasePoll() {
-        newPoll.status = Poll.PollStatus.RELEASED;
+    public static void ReleasePoll(Poll poll) {
+        poll.status = Poll.PollStatus.RELEASED;
     }
 
-    public void UnreleasePoll() {
-        newPoll.status = Poll.PollStatus.RUNNING;
+    public static void UnreleasePoll(Poll poll) {
+        poll.status = Poll.PollStatus.RUNNING;
     }
 
-    public void Vote(Participant user, String choice) {
+    public static void Vote(Participant user, String choice) {
 
     }
 
-    public HashMap<String[],Integer> GetPollResults() {
+    public static HashMap<String[],Integer> GetPollResults(Poll poll) {
         return null;
     }
 
-    public void DownloadPollDetails(PrintWriter output, String filename) {
+    public static void DownloadPollDetails(Poll poll, PrintWriter output, String filename) {
 
     }
 

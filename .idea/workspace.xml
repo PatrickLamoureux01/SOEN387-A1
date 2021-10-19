@@ -10,49 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9de12481-cf48-49d6-9c39-a381df2c5a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/PollCreation.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/close_poll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/release_poll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/run_poll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/unrelease_poll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/update_poll.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/A1_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/A1_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_5_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/A1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/Choice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/Poll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/PollBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/PollBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/PollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/PollServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PollCreation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PollCreation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/manager_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manager_index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user_index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/ManagerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/ManagerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollBusiness.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/manager_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/manager_index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/user_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/user_index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Choice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Choice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/ManagerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/ManagerServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Participant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Poll$PollStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Poll$PollStatus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Poll.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/PollBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/PollBusiness.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/PollManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/PollManager.class" afterDir="false" />
@@ -94,6 +61,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RunManager" selected="Tomcat Server.My server">
     <configuration name="All in A1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -112,8 +80,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="My server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="A1:war">
           <settings>
@@ -222,6 +202,9 @@
       <updated>1634476075398</updated>
       <workItem from="1634476077438" duration="2027000" />
       <workItem from="1634478208981" duration="22891000" />
+      <workItem from="1634592820162" duration="57000" />
+      <workItem from="1634592883658" duration="276000" />
+      <workItem from="1634593173400" duration="4790000" />
     </task>
     <servers />
   </component>

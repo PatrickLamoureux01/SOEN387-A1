@@ -1,17 +1,29 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<jsp:include page="/WEB-INF/head.jsp" />
+<jsp:include page="/WEB-INF/head.jsp"/>
 <body>
 <form method="POST" action="${pageContext.request.contextPath}/PollServlet">
-    <label>Poll name:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label>Question:</label>
-    <input type="text" id="question" name="question"><br><br>
-    <label>Choices:</label>
-    <input type="text" id="choices" name="choices"><br><br>
-    <input type="submit" name="PollCreation" value="PollCreation">
+    <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="mb-4">
+            <label for="pollName" class="form-label">Poll Name</label>
+            <input type="text" class="form-control" id="pollName" aria-describedby="pollHelp">
+            <div id="pollHelp" class="form-text">Enter the name for your poll.</div>
+        </div>
+        <div class="mb-4">
+            <label for="pollQuestion" class="form-label">Question</label>
+            <input type="text" class="form-control" id="pollQuestion" aria-describedby="questionHelp">
+            <div id="questionHelp" class="form-text">Enter the question for your poll.</div>
+        </div>
+        <div class="mb-4">
+            <label for="pollChoices" class="form-label">Choices</label>
+            <input type="text" class="form-control" id="pollChoices" aria-describedby="choicesHelp">
+            <div id="choicesHelp" class="form-text">Enter the choices for your poll separated by commas.</div>
+        </div>
+        <button type="submit" name="pollCreate" class="btn btn-primary">Create Poll</button>
+    </div>
 </form>
-<jsp:include page="/WEB-INF/footer.jsp" />
+<hr>
+<jsp:include page="/WEB-INF/footer.jsp"/>
 </body>
 </html>
