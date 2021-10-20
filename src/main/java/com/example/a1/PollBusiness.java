@@ -10,23 +10,24 @@ public class PollBusiness {
 
 
 
-    public static Poll CreatePoll(String name, String question, ArrayList<Choice> choices) {
+    public static void CreatePoll(Poll poll, String name, String question, ArrayList<Choice> choices) {
 
-        Poll newPoll;
+
 
         try {
-            newPoll = new Poll(name, question, choices);
-            newPoll.status = Poll.PollStatus.CREATED;
-            return newPoll;
+            poll.setName(name);
+            poll.setQuestion(question);
+            poll.setChoices(choices);
+            poll.setStatus(Poll.PollStatus.CREATED);
+
         }
         catch(Exception ex){
 
         }
-        return null;
     }
 
     public static void UpdatePoll(Poll poll, String name, String question, ArrayList<Choice> choices) {
-        if(poll.status == Poll.PollStatus.RUNNING || poll.status == Poll.PollStatus.CREATED)
+        if(poll.getStatus() == Poll.PollStatus.RUNNING || poll.getStatus() == Poll.PollStatus.CREATED)
         {
             //CLEAR CURRENT POLL RESULTS HERE ALSO
             poll.setName(name);
@@ -36,11 +37,11 @@ public class PollBusiness {
     }
 
     public static void ClearPoll(Poll poll) {
-        if(poll.status == Poll.PollStatus.RUNNING){
+        if(poll.getStatus() == Poll.PollStatus.RUNNING){
             //CLEAR CURRENT POLL RESULTS HERE ALSO
-        } else if(poll.status == Poll.PollStatus.RELEASED){
+        } else if(poll.getStatus() == Poll.PollStatus.RELEASED){
             //CLEAR CURRENT POLL RESULTS HERE ALSO
-            poll.status = Poll.PollStatus.CREATED;
+            poll.setStatus(Poll.PollStatus.CREATED);
         }
     }
 
@@ -49,15 +50,15 @@ public class PollBusiness {
     }
 
     public static void RunPoll(Poll poll) {
-        poll.status = Poll.PollStatus.RUNNING;
+        poll.setStatus(Poll.PollStatus.RUNNING);
     }
 
     public static void ReleasePoll(Poll poll) {
-        poll.status = Poll.PollStatus.RELEASED;
+        poll.setStatus(Poll.PollStatus.RELEASED);
     }
 
     public static void UnreleasePoll(Poll poll) {
-        poll.status = Poll.PollStatus.RUNNING;
+        poll.setStatus(Poll.PollStatus.RUNNING);
     }
 
     public static void Vote(Participant user, String choice) {

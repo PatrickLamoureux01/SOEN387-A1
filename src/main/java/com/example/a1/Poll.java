@@ -2,9 +2,10 @@ package com.example.a1;
 
 import org.w3c.dom.Text;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Poll {
+public class Poll implements Serializable {
 
     enum PollStatus {
         CREATED,
@@ -12,15 +13,19 @@ public class Poll {
         RELEASED
     }
 
-    String name;
-    String question;
-    PollStatus status;
-    ArrayList<Choice> choices;
+    private String name;
+    private String question;
+    private PollStatus status;
+    private ArrayList<Choice> choices;
+
+    public Poll() {
+
+    }
 
     public Poll(String _name,String _question,ArrayList<Choice> _choices) {
-        name = _name;
-        question = _question;
-        choices = _choices;
+        this.name = _name;
+        this.question = _question;
+        this.choices = _choices;
     }
 
     public String getName() {

@@ -10,13 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9de12481-cf48-49d6-9c39-a381df2c5a62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jstl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jstl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/Choice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/ManagerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/ManagerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/Poll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/PollBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/PollBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a1/PollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/a1/PollServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/PollCreation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PollCreation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manager_index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/ManagerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/ManagerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll$PollStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll$PollStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/Poll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/WEB-INF/classes/com/example/a1/PollServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/manager_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/A1-1.0-SNAPSHOT/manager_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/ManagerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/ManagerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Poll$PollStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Poll$PollStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/Poll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/PollBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/PollBusiness.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/a1/PollServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/a1/PollServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +61,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\User\OneDrive - Concordia University - Canada\School\Concordia\Semester_6\SOEN387\Assignments\A1\src\main\webapp\WEB-INF" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.My server">
     <configuration name="All in A1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -197,7 +221,12 @@
       <workItem from="1634478208981" duration="22891000" />
       <workItem from="1634592820162" duration="57000" />
       <workItem from="1634592883658" duration="276000" />
-      <workItem from="1634593173400" duration="6830000" />
+      <workItem from="1634593173400" duration="17661000" />
+      <workItem from="1634752400815" duration="907000" />
+      <workItem from="1634753328593" duration="510000" />
+      <workItem from="1634753855225" duration="144000" />
+      <workItem from="1634754010813" duration="354000" />
+      <workItem from="1634754383581" duration="1229000" />
     </task>
     <servers />
   </component>

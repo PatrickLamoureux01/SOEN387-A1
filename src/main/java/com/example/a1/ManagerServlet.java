@@ -21,7 +21,7 @@ public class ManagerServlet extends HttpServlet {
 
         String passcode = request.getParameter("passcode");
 
-        if (!passcode.equals("muffins")) {
+        if (!passcode.equals("a")) {
             session.setAttribute("invalid", "true");
             RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
