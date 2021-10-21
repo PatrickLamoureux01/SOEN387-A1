@@ -59,6 +59,7 @@ public class PollServlet extends HttpServlet {
         Poll newPoll = new Poll();
         PollBusiness.CreatePoll(newPoll,name,question,pollChoices);
         request.setAttribute("poll", newPoll);
+        session.setAttribute("poll",newPoll);
         request.getRequestDispatcher("manager_index.jsp").forward(request, response);
     }
 

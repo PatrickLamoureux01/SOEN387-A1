@@ -3,11 +3,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
 
-<% Poll p = null;
-    if (request.getAttribute("poll") != null) {
-        p = (Poll) request.getAttribute("poll");
-    }
-%>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <jsp:include page="/WEB-INF/head.jsp"/>
@@ -18,15 +13,9 @@
         <div class="card">
             <h5 class="card-header">Welcome, Poll Manager!</h5>
             <div class="card-body">
-                <%
-                    if (request.getAttribute("poll") == null) { %>
-                        <h5 class="card-title">There is no poll currently running.</h5>
-                <%
-                    } else { %>
+
                         <h5 class="card-title">Current Poll: ${poll.name}</h5>
-                   <%
-                    }
-                %>
+
                 <p class="card-text">Please select from the following list of actions:</p>
                 <a href="PollCreation.jsp" class="btn btn-outline-primary">
                     Create a
@@ -53,9 +42,11 @@
                 </a>
             </div>
         </div>
+        <a href="index.jsp" class="btn btn-outline-secondary" style="margin-top: 15px;">
+            Back to Homepage
+        </a>
     </div>
 </form>
-
 <hr>
 <jsp:include page="/WEB-INF/footer.jsp"/>
 </body>

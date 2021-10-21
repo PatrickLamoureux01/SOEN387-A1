@@ -60,4 +60,6 @@ public class Poll implements Serializable {
         this.choices = choices;
     }
 
+    public void upvote(int index) { this.choices.get(index).incrementVotes(); }
+
 }

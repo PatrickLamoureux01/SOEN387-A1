@@ -1,14 +1,41 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.example.a1.Poll" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<jsp:include page="/WEB-INF/head.jsp" />
+<jsp:include page="/WEB-INF/head.jsp"/>
 <body>
+<form method="POST" action="${pageContext.request.contextPath}/VoteServlet">
 <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
-   <p>There is no poll currently running.</p>
-   <p>Test submission  <input type="text" name="testVar"> </p>
-   <p><input type="submit" value="Submit" name="S1"></p>
+    <div class="card">
+        <div class="card-header">Current Poll: ${poll.name}</div>
+        <div class="card-body">
+            <h5 class="card-title">Question: ${poll.question}</h5>
+            <c:forEach var="poll" items="${poll.choices}">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pollChoice" id="pollChoice" value="${poll.text}">
+                    <label class="form-check-label" for="pollChoice">
+                        <c:choose>
+                            <c:when test="${empty poll.description}">
+                                <c:out value="${poll.text}"/>
+                            </c:when>
+                            <c:otherwise>
+                                <c:out value="${poll.text}"/> - <c:out value="${poll.description}"/>
+                            </c:otherwise>
+                        </c:choose>
+                    </label>
+                </div>
+            </c:forEach>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Vote</button>
+    </div>
+    <a href="index.jsp" class="btn btn-outline-secondary" style="margin-top: 15px;">
+        Back to Homepage
+    </a>
 </div>
+</form>
 <hr>
-<jsp:include page="/WEB-INF/footer.jsp" />
+<jsp:include page="/WEB-INF/footer.jsp"/>
 </body>
 </html>
