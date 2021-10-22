@@ -26,21 +26,29 @@ public class PollServlet extends HttpServlet {
         switch (parameterType) {
             case "run":
                 PollBusiness.RunPoll(thePoll);
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
             case "close":
                 PollBusiness.ClosePoll(thePoll);
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
             case "release":
                 PollBusiness.ReleasePoll(thePoll);
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
             case "unrelease":
                 PollBusiness.UnreleasePoll(thePoll);
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
             case "update":
                 request.getRequestDispatcher("update_poll.jsp").forward(request, response);
                 break;
             case "clear":
                 PollBusiness.ClearPoll(thePoll);
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
+                break;
+            case "download":
+                request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
 
         }
