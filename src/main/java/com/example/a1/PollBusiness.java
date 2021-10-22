@@ -11,54 +11,106 @@ public class PollBusiness {
 
 
     public static void CreatePoll(Poll poll, String name, String question, ArrayList<Choice> choices) {
-
-
-
         try {
             poll.setName(name);
             poll.setQuestion(question);
             poll.setChoices(choices);
             poll.setStatus(Poll.PollStatus.CREATED);
-
         }
         catch(Exception ex){
-
+            System.out.println(ex);
         }
     }
 
     public static void UpdatePoll(Poll poll, String name, String question, ArrayList<Choice> choices) {
-        if(poll.getStatus() == Poll.PollStatus.RUNNING || poll.getStatus() == Poll.PollStatus.CREATED)
-        {
-            //CLEAR CURRENT POLL RESULTS HERE ALSO
-            poll.setName(name);
-            poll.setQuestion(question);
-            poll.setChoices(choices);
+        try {
+            if(poll.getStatus() == Poll.PollStatus.RELEASED)
+                throw new Exception("Error: This Poll has been released. Unrelease the Poll to update it.");
+
+            if (poll.getStatus() == Poll.PollStatus.RUNNING || poll.getStatus() == Poll.PollStatus.CREATED) {
+                //CLEAR CURRENT POLL RESULTS HERE ALSO
+                poll.setName(name);
+                poll.setQuestion(question);
+                poll.setChoices(choices);
+            }
         }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+
     }
 
     public static void ClearPoll(Poll poll) {
-        if(poll.getStatus() == Poll.PollStatus.RUNNING){
-            //CLEAR CURRENT POLL RESULTS HERE ALSO
-        } else if(poll.getStatus() == Poll.PollStatus.RELEASED){
-            //CLEAR CURRENT POLL RESULTS HERE ALSO
-            poll.setStatus(Poll.PollStatus.CREATED);
+        try {
+            if(poll.getStatus() == Poll.PollStatus.CREATED)
+                throw new Exception("Error: Poll must be Running or Release to be cleared.");
+
+            if (poll.getStatus() == Poll.PollStatus.RUNNING) {
+                //CLEAR CURRENT POLL RESULTS HERE ALSO
+            } else if (poll.getStatus() == Poll.PollStatus.RELEASED) {
+                //CLEAR CURRENT POLL RESULTS HERE ALSO
+                poll.setStatus(Poll.PollStatus.CREATED);
+            }
+        }
+        catch (Exception ex){
+            System.out.println(ex);
         }
     }
 
     public static void ClosePoll(Poll poll) {
+        try {
+            if(poll.getStatus() != Poll.PollStatus.RELEASED){
+                throw new Exception("Error: Only Released Polls may be closed.");
+            }
 
+            //Remove the Polls Data from the system
+            poll = null;
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+        }
     }
 
     public static void RunPoll(Poll poll) {
-        poll.setStatus(Poll.PollStatus.RUNNING);
+        try {
+            if(poll.getStatus() == Poll.PollStatus.RUNNING) {
+                throw new Exception("Error: Poll is already Running.");
+            }
+            if(poll.getStatus() == Poll.PollStatus.RELEASED) {
+                throw new Exception("Error: Poll has been Released. Clear Poll to reset it to be ran again.");
+            }
+            poll.setStatus(Poll.PollStatus.RUNNING);
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+        }
     }
 
     public static void ReleasePoll(Poll poll) {
-        poll.setStatus(Poll.PollStatus.RELEASED);
+        try {
+            if(poll.getStatus() == Poll.PollStatus.CREATED) {
+                throw new Exception("Error: Poll must be Running before it can be Released.");
+            }
+            if(poll.getStatus() == Poll.PollStatus.RELEASED) {
+                throw new Exception("Error: Poll has already been Released.");
+            }
+            poll.setStatus(Poll.PollStatus.RELEASED);
+        }
+        catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 
     public static void UnreleasePoll(Poll poll) {
-        poll.setStatus(Poll.PollStatus.RUNNING);
+        try {
+            if(poll.getStatus() != Poll.PollStatus.RELEASED) {
+                throw new Exception("Error: This Poll has not been Released.");
+            }
+            poll.setStatus(Poll.PollStatus.RUNNING);
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+        }
     }
 
     public static void Vote(Participant user, String choice) {

@@ -23,7 +23,7 @@ public class VoteServlet extends HttpServlet {
         String answer = request.getParameter("pollChoice");
 
         ArrayList<Choice> cs = p.getChoices();
-        cs.indexOf()
+        //cs.indexOf();
 
 
 
