@@ -62,4 +62,11 @@ public class Poll implements Serializable {
 
     public void upvote(int index) { this.choices.get(index).incrementVotes(); }
 
+    public void clear() {
+        this.name = "";
+        this.question = "";
+        this.choices = new ArrayList<Choice>();
+        this.setStatus(PollStatus.CREATED);
+    }
+
 }

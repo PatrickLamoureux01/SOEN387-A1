@@ -28,7 +28,7 @@ public class PollBusiness {
                 throw new Exception("Error: This Poll has been released. Unrelease the Poll to update it.");
 
             if (poll.getStatus() == Poll.PollStatus.RUNNING || poll.getStatus() == Poll.PollStatus.CREATED) {
-                //CLEAR CURRENT POLL RESULTS HERE ALSO
+                poll.clear();
                 poll.setName(name);
                 poll.setQuestion(question);
                 poll.setChoices(choices);
@@ -46,9 +46,9 @@ public class PollBusiness {
                 throw new Exception("Error: Poll must be Running or Release to be cleared.");
 
             if (poll.getStatus() == Poll.PollStatus.RUNNING) {
-                //CLEAR CURRENT POLL RESULTS HERE ALSO
+                poll.clear();
             } else if (poll.getStatus() == Poll.PollStatus.RELEASED) {
-                //CLEAR CURRENT POLL RESULTS HERE ALSO
+                poll.clear();
                 poll.setStatus(Poll.PollStatus.CREATED);
             }
         }

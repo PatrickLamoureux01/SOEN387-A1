@@ -18,21 +18,33 @@ public class PollServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        HttpSession session = request.getSession(true);
         String parameterType = request.getParameter("type");
+
+        Poll thePoll = (Poll) session.getAttribute("poll");
 
         switch (parameterType) {
             case "run":
+                PollBusiness.RunPoll(thePoll);
                 break;
             case "close":
+                PollBusiness.ClosePoll(thePoll);
                 break;
             case "release":
+                PollBusiness.ReleasePoll(thePoll);
                 break;
             case "unrelease":
+                PollBusiness.UnreleasePoll(thePoll);
                 break;
             case "update":
+                request.getRequestDispatcher("update_poll.jsp").forward(request, response);
                 break;
-        }
+            case "clear":
+                PollBusiness.ClearPoll(thePoll);
+                break;
 
+        }
+        System.out.println(thePoll.getStatus());
     }
 
     @Override

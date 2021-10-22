@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.stream.IntStream;
 
 @WebServlet(name = "VoteServlet", value = "/VoteServlet")
 public class VoteServlet extends HttpServlet {
@@ -23,9 +24,13 @@ public class VoteServlet extends HttpServlet {
         String answer = request.getParameter("pollChoice");
 
         ArrayList<Choice> cs = p.getChoices();
-        //cs.indexOf();
+        int index = IntStream.range(0, cs.size())
+                .filter(i -> cs.get(i).text.equals(answer))
+                .findFirst()
+                .orElse(-1);
 
-
+        p.upvote(index);
+        request.getRequestDispatcher("thankyou.jsp").forward(request, response);
 
     }
 }
