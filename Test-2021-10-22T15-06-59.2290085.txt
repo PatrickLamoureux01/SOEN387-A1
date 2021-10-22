@@ -1,0 +1,5 @@
+Poll name: Test
+Poll Question: How many farts
+dog: 0
+cat: 1
+fish: 0

@@ -9,7 +9,7 @@
 <form method="POST" action="${pageContext.request.contextPath}/VoteServlet">
     <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <c:choose>
-            <c:when test="${poll.status==null}">
+            <c:when test="${poll.status==null or poll.status=='CREATED'}">
                 <h1>There is no poll in existence yet.</h1>
             </c:when>
             <c:when test="${poll.status=='RELEASED'}">

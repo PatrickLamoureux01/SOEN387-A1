@@ -1,6 +1,5 @@
 package com.example.a1;
 
-import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,6 +16,7 @@ public class Poll implements Serializable {
     private String question;
     private PollStatus status;
     private ArrayList<Choice> choices;
+    private String dt;
 
     public Poll() {
 
@@ -59,6 +59,10 @@ public class Poll implements Serializable {
     public void setChoices(ArrayList<Choice> choices) {
         this.choices = choices;
     }
+
+    public String getDateTime() { return dt; }
+
+    public void setDateTime(String dt) { this.dt = dt; }
 
     public void upvote(int index) { this.choices.get(index).incrementVotes(); }
 

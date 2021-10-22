@@ -5,7 +5,10 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 
+
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,11 +51,12 @@ public class PollServlet extends HttpServlet {
                 request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
             case "download":
+                PollBusiness.DownloadPollDetails(thePoll);
                 request.getRequestDispatcher("manager_index.jsp").forward(request, response);
                 break;
 
         }
-        System.out.println(thePoll.getStatus());
+        //System.out.println(thePoll.getStatus());
     }
 
     @Override

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,10 +18,10 @@
         </div>
         <div class="mb-4">
             <label for="pollChoices" class="form-label">Choices</label>
-            <input type="text" class="form-control" name="pollChoices" id="pollChoices" aria-describedby="choicesHelp" value="${poll.choices}">
+            <input type="text" class="form-control" name="pollChoices" id="pollChoices" aria-describedby="choicesHelp">
             <div id="choicesHelp" class="form-text">Enter the updated choices for your poll in the following format: Choice:(optional description),... </div>
         </div>
-        <button type="submit" name="pollCreate" class="btn btn-primary">Create Poll</button>
+        <button type="submit" name="pollUpdate" class="btn btn-primary">Update Poll</button>
     </div>
 </form>
 <hr>

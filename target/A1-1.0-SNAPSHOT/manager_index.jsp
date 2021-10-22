@@ -13,11 +13,17 @@
         <div class="card">
             <h5 class="card-header">Welcome, Poll Manager!</h5>
             <div class="card-body">
-
+                <c:choose>
+                    <c:when test="${poll.name==null}">
+                        <h5 class="card-title">Current Poll: N/A</h5>
+                        <h5 class="card-title">Poll Status: N/A</h5>
+                    </c:when>
+                    <c:otherwise>
                         <h5 class="card-title">Current Poll: ${poll.name}</h5>
-
+                        <h5 class="card-title">Poll Status: ${poll.status}</h5>
+                    </c:otherwise>
+                </c:choose>
                 <p class="card-text">Please select from the following list of actions:</p>
-
                 <a href="PollCreation.jsp" class="btn btn-outline-primary">
                     Create a
                     Poll
@@ -99,6 +105,30 @@
                         <a href="PollServlet?type=close" class="btn btn-outline-primary">
                             Close
                             Poll
+                        </a>
+                    </c:otherwise>
+                </c:choose>
+                <c:choose>
+                    <c:when test="${poll.status=='RELEASED'}">
+                        <a href="view_results.jsp" class="btn btn-outline-primary">
+                            View Poll Results
+                        </a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="view_results.jsp" class="btn disabled btn-outline-primary">
+                            View Poll Results
+                        </a>
+                    </c:otherwise>
+                </c:choose>
+                <c:choose>
+                    <c:when test="${poll.status=='RELEASED'}">
+                        <a href="PollServlet?type=download" class="btn btn-outline-primary">
+                            Download Poll Results
+                        </a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="PollServlet?type=download" class="btn disabled btn-outline-primary">
+                            Download Poll Results
                         </a>
                     </c:otherwise>
                 </c:choose>

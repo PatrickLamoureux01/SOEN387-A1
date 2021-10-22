@@ -2,7 +2,12 @@ package com.example.a1;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -65,6 +70,7 @@ public class PollBusiness {
 
             //Remove the Polls Data from the system
             poll = null;
+            System.gc();
         }
         catch (Exception ex){
             System.out.println(ex);
@@ -95,6 +101,13 @@ public class PollBusiness {
                 throw new Exception("Error: Poll has already been Released.");
             }
             poll.setStatus(Poll.PollStatus.RELEASED);
+            LocalDateTime dt = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+            String formattedDT = dt.format(formatter);
+
+            String x = formattedDT.replace(":","-");
+
+            poll.setDateTime(x);
         }
         catch (Exception ex) {
             System.out.println(ex);
@@ -113,16 +126,42 @@ public class PollBusiness {
         }
     }
 
-    public static void Vote(Participant user, String choice) {
-
+    public static void Vote(Poll poll, Participant user, int choice) {
+        poll.upvote(choice);
     }
 
     public static HashMap<String[],Integer> GetPollResults(Poll poll) {
         return null;
     }
 
-    public static void DownloadPollDetails(Poll poll, PrintWriter output, String filename) {
+    public static void DownloadPollDetails(Poll poll) {
+        try {
+            if(poll.getStatus() != Poll.PollStatus.RELEASED) {
+                throw new Exception("Error: This Poll has not been Released.");
+            }
+            String targetPath = "D:\\User\\OneDrive - Concordia University - Canada\\School\\Concordia\\Semester_6\\SOEN387\\Assignments\\A1\\";
+            String filename = poll.getName()+"-"+poll.getDateTime()+".txt";
+            File newFile = new File(targetPath,filename);
+            System.out.println(newFile.getName());
+            Boolean test = newFile.createNewFile();
+            try {
+                PrintWriter output = new PrintWriter(newFile);
+                ArrayList<Choice> c = poll.getChoices();
 
+                output.write("Poll name: " + poll.getName() + "\n");
+                output.write("Poll Question: " + poll.getQuestion() + "\n");
+                for (Choice x : c) {
+                    output.write(x.getText() + ": " + x.getVotes() + "\n");
+                }
+                output.flush();
+                output.close();
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+        }
     }
 
 }
